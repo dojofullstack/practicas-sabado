@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Tienda Virtual Nike</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.14/dist/full.min.css" rel="stylesheet" type="text/css" />
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <style>
+
+    </style>
+
+
+</head>
+
+<body>
+
+
+    <header>
+
+        <div class="navbar bg-base-100">
+            <div class="flex-1">
+              <a class="btn btn-ghost text-xl">
+                
+                <img class="h-[90px]" src="https://thumbs.dreamstime.com/b/dise%C3%B1o-vectorial-de-logotipo-negro-nike-sports-logo-vector-listo-para-imprimir-ilustraciones-183282273.jpg" alt="">
+
+              </a>
+            </div>
+            <div class="flex-none">
+
+                <div>
+                    <input
+                    type="text"
+                    placeholder="Busca tus prodctos aqui"
+                    class="input input-bordered input-secondary w-full max-w-xs" />
+                </div>
+
+              <div class="dropdown dropdown-end">
+                <div tabindex="0" role="button" class="btn btn-ghost btn-circle">
+                  <div class="indicator">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      class="h-5 w-5"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor">
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z" />
+                    </svg>
+                    <span id="total-items-cart" class="badge badge-sm indicator-item">0</span>
+                  </div>
+                </div>
+                <div
+                  tabindex="0"
+                  class="card card-compact dropdown-content bg-base-100 z-[1] mt-3 w-52 shadow">
+                  <div class="card-body" id="resumenCarrito">
+                    <span class="text-lg font-bold">0 Items</span>
+                    <span class="text-info">Subtotal: $0</span>
+                    <div class="card-actions">
+                        <a href="/project-nike/checkout.html">
+                            <button class="btn btn-primary btn-block">Ver Carrito</button>
+                        </a>
+                      
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="dropdown dropdown-end">
+                <div tabindex="0" role="button" class="btn btn-ghost btn-circle avatar">
+                  <div class="w-10 rounded-full">
+                    <img
+                      alt="Tailwind CSS Navbar component"
+                      src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp" />
+                  </div>
+                </div>
+                <ul
+                  tabindex="0"
+                  class="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow">
+                  <li>
+                    <a class="justify-between">
+                      Profile
+                      <span class="badge">New</span>
+                    </a>
+                  </li>
+                  <li><a>Settings</a></li>
+                  <li><a>Logout</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+
+
+    <div class="carousel w-full">
+        <div id="slide1" class="carousel-item relative w-full">
+          <img
+            src="https://www.nike.com.pe/dw/image/v2/BJKZ_PRD/on/demandware.static/-/Library-Sites-NikePeruSharedLibrary/default/dwf4f48c48/Landings/Homepage/Imagenes/p1-air-force-desktop.jpg"
+            class="w-full" />
+          <div class="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between">
+            <a href="#slide4" class="btn btn-circle">❮</a>
+            <a href="#slide2" class="btn btn-circle">❯</a>
+          </div>
+        </div>
+        <div id="slide2" class="carousel-item relative w-full">
+          <img
+            src="https://www.nike.com.pe/dw/image/v2/BJKZ_PRD/on/demandware.static/-/Library-Sites-NikePeruSharedLibrary/default/dwf4f48c48/Landings/Homepage/Imagenes/p1-air-force-desktop.jpg"
+            class="w-full" />
+          <div class="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between">
+            <a href="#slide1" class="btn btn-circle">❮</a>
+            <a href="#slide3" class="btn btn-circle">❯</a>
+          </div>
+        </div>
+        <div id="slide3" class="carousel-item relative w-full">
+          <img
+            src="https://www.nike.com.pe/dw/image/v2/BJKZ_PRD/on/demandware.static/-/Library-Sites-NikePeruSharedLibrary/default/dwf4f48c48/Landings/Homepage/Imagenes/p1-air-force-desktop.jpg"
+            class="w-full" />
+          <div class="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between">
+            <a href="#slide2" class="btn btn-circle">❮</a>
+            <a href="#slide4" class="btn btn-circle">❯</a>
+          </div>
+        </div>
+  
+      </div>
+
+
+    </header>
+
+
+
+    <main class="m-auto px-10">
+
+
+        <h2 class="text-2xl font-bold my-3">Categorias Temporada Navidena</h2>
+        <!-- categorias de Nike -->
+        <div class="flex gap-5">
+
+            <div class="card bg-base-100 image-full w-96 shadow-xl">
+                <figure>
+                  <img
+                    src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp"
+                    alt="Shoes" />
+                </figure>
+                <div class="card-body">
+                  <h2 class="card-title">Zatillas!</h2>
+                  <p>If a dog chews shoes whose shoes does he choose?</p>
+                  <div class="card-actions justify-end">
+                    <button class="btn btn-primary">Buy Now</button>
+                  </div>
+                </div>
+              </div>
+
+
+
+              <div class="card bg-base-100 image-full w-96 shadow-xl">
+                <figure>
+                  <img
+                    src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp"
+                    alt="Shoes" />
+                </figure>
+                <div class="card-body">
+                  <h2 class="card-title">Zapatos!</h2>
+                  <p>If a dog chews shoes whose shoes does he choose?</p>
+                  <div class="card-actions justify-end">
+                    <button class="btn btn-primary">Buy Now</button>
+                  </div>
+                </div>
+              </div>
+
+
+
+              <div class="card bg-base-100 image-full w-96 shadow-xl">
+                <figure>
+                  <img
+                    src="https://www.nike.com.pe/dw/image/v2/BJKZ_PRD/on/demandware.static/-/Library-Sites-NikePeruSharedLibrary/default/dw3687673f/Landings/Homepage/Imagenes/nike-accesorios-desktop.jpg"
+                    alt="Shoes" />
+                </figure>
+                <div class="card-body">
+                  <h2 class="card-title">Gorras!</h2>
+                  <p>If a dog chews shoes whose shoes does he choose?</p>
+                  <div class="card-actions justify-end">
+                    <button class="btn btn-primary">Buy Now</button>
+                  </div>
+                </div>
+              </div>
+
+        </div>
+
+
+        <h2 class="text-2xl font-bold my-3">Productos Betseller</h2>
+
+
+        <div class="flex gap-5 flex-wrap">
+
+            <!-- este compoente genera un producto -->
+            <div class="card bg-base-100 w-96 shadow-xl">
+                <figure>
+                  <img
+                    src="https://www.nike.com.pe/dw/image/v2/BJKZ_PRD/on/demandware.static/-/Sites-catalog-equinox/default/dw7c034f70/images/hi-res/195244753741_1_20241003-mrtPeru.jpg?sw=500&sh=500"
+                    alt="Shoes" />
+                </figure>
+                <div class="card-body">
+                  <h2 class="card-title">
+                    Shoes!
+                    <div class="badge badge-secondary">NEW</div>
+                  </h2>
+                  <p class="text-xl text-primary font-bold">$99 USD</p>
+
+                  <div>
+                    <button onclick="addProductCart({ id: 1, name: 'ZApatilla Nike', price: 19.99 })" class="btn btn-secondary text-xl">Agregar al carrito</button>
+                  </div>
+
+                  <div class="card-actions justify-end">
+                    <div class="badge badge-outline">Fashion</div>
+                    <div class="badge badge-outline">Products</div>
+                  </div>
+                </div>
+              </div>
+
+                <!-- este compoente genera un producto -->
+            <div class="card bg-base-100 w-96 shadow-xl">
+                <figure>
+                  <img
+                    src="https://www.nike.com.pe/dw/image/v2/BJKZ_PRD/on/demandware.static/-/Sites-catalog-equinox/default/dw14d019e4/images/hi-res/197600818767_1_20241002-mrtPeru.jpg?sw=500&sh=500"
+                    alt="Shoes" />
+                </figure>
+                <div class="card-body">
+                  <h2 class="card-title">
+                    ZApato 360!
+                    <div class="badge badge-secondary">NEW</div>
+                  </h2>
+                  <p class="text-xl text-primary font-bold">$33 USD</p>
+
+                  <div>
+                    <button onclick="addProductCart({ id: 1, name: 'Zapato 360', price: 33 })" class="btn btn-secondary text-xl">Agregar al carrito</button>
+                  </div>
+
+                  <div class="card-actions justify-end">
+                    <div class="badge badge-outline">Fashion</div>
+                    <div class="badge badge-outline">Products</div>
+                  </div>
+                </div>
+              </div>
+
+
+
+                <!-- este compoente genera un producto -->
+            <div class="card bg-base-100 w-96 shadow-xl">
+                <figure>
+                  <img
+                    src="https://www.nike.com.pe/dw/image/v2/BJKZ_PRD/on/demandware.static/-/Sites-catalog-equinox/default/dw7c034f70/images/hi-res/195244753741_1_20241003-mrtPeru.jpg?sw=500&sh=500"
+                    alt="Shoes" />
+                </figure>
+                <div class="card-body">
+                  <h2 class="card-title">
+                    Shoes!
+                    <div class="badge badge-secondary">NEW</div>
+                  </h2>
+                  <p class="text-xl text-primary font-bold">$99 USD</p>
+
+                  <div>
+                    <button class="btn btn-secondary text-xl">Agregar al carrito</button>
+                  </div>
+
+                  <div class="card-actions justify-end">
+                    <div class="badge badge-outline">Fashion</div>
+                    <div class="badge badge-outline">Products</div>
+                  </div>
+                </div>
+              </div>
+
+
+                <!-- este compoente genera un producto -->
+                <div class="card bg-base-100 w-96 shadow-xl">
+                    <figure>
+                      <img
+                        src="https://www.nike.com.pe/dw/image/v2/BJKZ_PRD/on/demandware.static/-/Sites-catalog-equinox/default/dw14d019e4/images/hi-res/197600818767_1_20241002-mrtPeru.jpg?sw=500&sh=500"
+                        alt="Shoes" />
+                    </figure>
+                    <div class="card-body">
+                      <h2 class="card-title">
+                        Shoes!
+                        <div class="badge badge-secondary">NEW</div>
+                      </h2>
+                      <p class="text-xl text-primary font-bold">$99 USD</p>
+    
+                      <div>
+                        <button class="btn btn-secondary text-xl">Agregar al carrito</button>
+                      </div>
+    
+                      <div class="card-actions justify-end">
+                        <div class="badge badge-outline">Fashion</div>
+                        <div class="badge badge-outline">Products</div>
+                      </div>
+                    </div>
+                  </div>
+
+                  
+
+
+
+                <!-- este compoente genera un producto -->
+            <div class="card bg-base-100 w-96 shadow-xl">
+                <figure>
+                  <img
+                    src="https://www.nike.com.pe/dw/image/v2/BJKZ_PRD/on/demandware.static/-/Sites-catalog-equinox/default/dw14d019e4/images/hi-res/197600818767_1_20241002-mrtPeru.jpg?sw=500&sh=500"
+                    alt="Shoes" />
+                </figure>
+                <div class="card-body">
+                  <h2 class="card-title">
+                    Shoes!
+                    <div class="badge badge-secondary">NEW</div>
+                  </h2>
+                  <p class="text-xl text-primary font-bold">$99 USD</p>
+
+                  <div>
+                    <button class="btn btn-secondary text-xl">Agregar al carrito</button>
+                  </div>
+
+                  <div class="card-actions justify-end">
+                    <div class="badge badge-outline">Fashion</div>
+                    <div class="badge badge-outline">Products</div>
+                  </div>
+                </div>
+              </div>
+
+
+        </div>
+
+
+
+
+
+    </main>
+
+
+
+    <footer class="footer bg-base-200 text-base-content p-10">
+        <nav>
+          <h6 class="footer-title">Services</h6>
+          <a class="link link-hover">Branding</a>
+          <a class="link link-hover">Design</a>
+          <a class="link link-hover">Marketing</a>
+          <a class="link link-hover">Advertisement</a>
+        </nav>
+        <nav>
+          <h6 class="footer-title">Company</h6>
+          <a class="link link-hover">About us</a>
+          <a class="link link-hover">Contact</a>
+          <a class="link link-hover">Jobs</a>
+          <a class="link link-hover">Press kit</a>
+        </nav>
+        <nav>
+          <h6 class="footer-title">Legal</h6>
+          <a class="link link-hover">Terms of use</a>
+          <a class="link link-hover">Privacy policy</a>
+          <a class="link link-hover">Cookie policy</a>
+        </nav>
+        <form>
+          <h6 class="footer-title">Newsletter</h6>
+          <fieldset class="form-control w-80">
+            <label class="label">
+              <span class="label-text">Enter your email address</span>
+            </label>
+            <div class="join">
+              <input
+                type="text"
+                placeholder="username@site.com"
+                class="input input-bordered join-item" />
+              <button class="btn btn-primary join-item">Subscribe</button>
+            </div>
+          </fieldset>
+        </form>
+      </footer>
+
+
+      <!-- <script>
+        console.log("modulo app.js");
+      </script> -->
+
+
+      <script src="assets/js/app.js"></script>
+    
+    
+</body>
+
+</html>
